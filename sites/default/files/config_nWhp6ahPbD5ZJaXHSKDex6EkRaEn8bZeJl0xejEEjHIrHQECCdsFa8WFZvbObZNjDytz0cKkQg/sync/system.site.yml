@@ -1,0 +1,15 @@
+uuid: 4ee639dd-a3ef-4607-af00-bf3bb4dab49e
+name: 'Sistema Toronto'
+mail: laura.j.johnson@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /home
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+mail_notification: ''

@@ -1,0 +1,21 @@
+uuid: 27a57752-6cdd-4a6c-9700-ee22fb69e458
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_app_capable
+    - node.type.application
+  module:
+    - options
+id: node.application.field_app_capable
+field_name: field_app_capable
+entity_type: node
+bundle: application
+label: 'Is Your Child Physically Capable of Singing and playing an instrument?'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

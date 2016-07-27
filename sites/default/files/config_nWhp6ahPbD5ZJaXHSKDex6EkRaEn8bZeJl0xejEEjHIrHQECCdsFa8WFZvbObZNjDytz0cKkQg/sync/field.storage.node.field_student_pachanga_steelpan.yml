@@ -1,0 +1,33 @@
+uuid: 47f83ce0-d496-41fa-b300-f79827251037
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_student_pachanga_steelpan
+field_name: field_student_pachanga_steelpan
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Junior Pachanga'
+      label: 'Junior Pachanga'
+    -
+      value: 'Senior Pachanga'
+      label: 'Senior Pachanga'
+    -
+      value: 'Steel Pan I'
+      label: 'Steel Pan I'
+    -
+      value: 'Steel Pan II'
+      label: 'Steel Pan II'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

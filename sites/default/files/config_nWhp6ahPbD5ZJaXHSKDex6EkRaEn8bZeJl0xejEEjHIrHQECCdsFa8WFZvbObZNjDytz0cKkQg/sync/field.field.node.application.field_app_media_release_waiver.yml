@@ -1,0 +1,21 @@
+uuid: 08eaba9c-ac12-4d74-b000-e08a06804b79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_app_media_release_waiver
+    - node.type.application
+  module:
+    - options
+id: node.application.field_app_media_release_waiver
+field_name: field_app_media_release_waiver
+entity_type: node
+bundle: application
+label: 'I agree to the terms of the Media Release Waiver'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

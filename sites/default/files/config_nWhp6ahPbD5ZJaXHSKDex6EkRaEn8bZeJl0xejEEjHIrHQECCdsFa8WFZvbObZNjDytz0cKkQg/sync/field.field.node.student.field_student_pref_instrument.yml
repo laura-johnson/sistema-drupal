@@ -1,0 +1,19 @@
+uuid: 0093ab2c-2665-4ab9-8341-65a944d276f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_pref_instrument
+    - node.type.student
+id: node.student.field_student_pref_instrument
+field_name: field_student_pref_instrument
+entity_type: node
+bundle: student
+label: 'Preferred Instrument'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

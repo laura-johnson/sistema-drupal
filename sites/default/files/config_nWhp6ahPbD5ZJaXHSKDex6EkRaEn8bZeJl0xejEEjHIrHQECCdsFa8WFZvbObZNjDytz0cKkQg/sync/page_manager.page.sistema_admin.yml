@@ -1,0 +1,21 @@
+uuid: ac25ee0f-3deb-4df7-8600-dd8a2edf226f
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: sistema_admin
+label: 'Sistema Applications'
+use_admin_theme: false
+path: /sistema-applications
+access_logic: and
+access_conditions:
+  33efe05d-12eb-4434-ab00-fb85aa1b4c2a:
+    id: user_role
+    roles:
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: current_user
+    uuid: 33efe05d-12eb-4434-ab00-fb85aa1b4c2a
+parameters: {  }

@@ -1,0 +1,19 @@
+uuid: ff3d6ebc-6370-48cf-a500-a7fca79c5c9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_teacher_last
+    - node.type.student
+id: node.student.field_student_teacher_last
+field_name: field_student_teacher_last
+entity_type: node
+bundle: student
+label: 'Teacher Last Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

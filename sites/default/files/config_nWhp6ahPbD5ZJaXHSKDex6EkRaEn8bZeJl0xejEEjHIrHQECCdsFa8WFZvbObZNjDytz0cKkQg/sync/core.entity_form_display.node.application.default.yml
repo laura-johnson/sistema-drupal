@@ -1,0 +1,107 @@
+uuid: ad2180f7-6511-407f-8519-25f523507860
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.application.field_app_academic_release
+    - field.field.node.application.field_app_capable
+    - field.field.node.application.field_app_code_of_conduct_waiver
+    - field.field.node.application.field_app_comments
+    - field.field.node.application.field_app_epi_pen
+    - field.field.node.application.field_app_inhaler
+    - field.field.node.application.field_app_lending_policy
+    - field.field.node.application.field_app_liability_release
+    - field.field.node.application.field_app_list_allergies
+    - field.field.node.application.field_app_media_release_waiver
+    - field.field.node.application.field_app_medical_waiver
+    - field.field.node.application.field_student_id
+    - node.type.application
+id: node.application.default
+targetEntityType: node
+bundle: application
+mode: default
+content:
+  field_app_academic_release:
+    weight: 35
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_app_capable:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_app_code_of_conduct_waiver:
+    weight: 36
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+  field_app_comments:
+    weight: 33
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  field_app_epi_pen:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_app_inhaler:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_app_lending_policy:
+    weight: 38
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+  field_app_liability_release:
+    weight: 37
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+  field_app_list_allergies:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  field_app_media_release_waiver:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_app_medical_waiver:
+    weight: 34
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+  field_student_id:
+    type: entity_reference_autocomplete
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

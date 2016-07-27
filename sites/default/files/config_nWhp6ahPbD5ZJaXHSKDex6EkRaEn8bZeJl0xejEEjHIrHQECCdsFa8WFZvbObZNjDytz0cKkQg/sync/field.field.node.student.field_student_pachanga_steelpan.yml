@@ -1,0 +1,21 @@
+uuid: 99830496-7f84-4160-b325-37ccf61c50e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_pachanga_steelpan
+    - node.type.student
+  module:
+    - options
+id: node.student.field_student_pachanga_steelpan
+field_name: field_student_pachanga_steelpan
+entity_type: node
+bundle: student
+label: 'Pachanga/Steel pan'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

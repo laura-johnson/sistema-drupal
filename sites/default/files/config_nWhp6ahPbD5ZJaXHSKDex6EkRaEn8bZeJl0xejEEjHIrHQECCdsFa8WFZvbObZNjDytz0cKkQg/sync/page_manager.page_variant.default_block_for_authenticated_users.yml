@@ -1,0 +1,67 @@
+uuid: 06e0ddd4-0c5e-4bc6-b601-1c1acb998c2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page
+    - views.view.sistema_users
+    - views.view.students
+  module:
+    - user
+    - views
+id: default_block_for_authenticated_users
+label: 'Default block for authenticated users'
+variant: block_display
+variant_settings:
+  blocks:
+    8af4f27a-bef9-44bf-9900-ac6f6085042f:
+      id: 'views_block:students-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: top
+      weight: -9
+      uuid: 8af4f27a-bef9-44bf-9900-ac6f6085042f
+      context_mapping: {  }
+    69003c48-d347-4b7d-ac00-ebe7cbefa2ab:
+      id: 'views_block:students-block_2'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: bottom
+      weight: 0
+      uuid: 69003c48-d347-4b7d-ac00-ebe7cbefa2ab
+      context_mapping: {  }
+    ed3ff970-7ca2-4679-af08-8f3c0bfe7f14:
+      id: 'views_block:sistema_users-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: top
+      weight: -10
+      uuid: ed3ff970-7ca2-4679-af08-8f3c0bfe7f14
+      context_mapping: {  }
+  id: block_display
+  label: null
+  uuid: 7cb9ac45-bd7b-4811-ae07-7c912f61c910
+  weight: 0
+  page_title: 'Welcome to Sistema registration!'
+page: home_page
+weight: 0
+selection_criteria:
+  23877acb-0a72-4db0-b704-4cc1ca6cf2a8:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: true
+    context_mapping:
+      user: current_user
+    uuid: 23877acb-0a72-4db0-b704-4cc1ca6cf2a8
+selection_logic: and
+static_context: {  }

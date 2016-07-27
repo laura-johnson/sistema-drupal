@@ -1,0 +1,21 @@
+uuid: b4c7d51a-07cf-4243-9b00-ffb7e777e752
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_app_academic_release
+    - node.type.application
+  module:
+    - options
+id: node.application.field_app_academic_release
+field_name: field_app_academic_release
+entity_type: node
+bundle: application
+label: 'I agree to the terms of the Academic Release Waiver'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,79 @@
+<?php
+
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Core\Field\FieldDefinitionInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\Core\Access\AccessResult;
+use \Drupal\node\Entity\Node;
+use \Drupal\node\NodeInterface;
+/*
+function sistema_custom_node_access(\Drupal\node\NodeInterface $node, $op, \Drupal\Core\Session\AccountInterface $account) {
+    $access = AccessResult::neutral();
+
+
+    if ($op == 'edit' && $node->type == 'student' || $op == 'view' && $node->type == 'student') {
+
+
+      if ($student->field_student_parent_uid->target_id == $account->id()) {
+
+        $access = AccessResult::allowed();
+      }
+
+      else {
+
+        $access = AccessResult::forbidden();
+
+      }
+
+    }
+
+    return $access;
+
+}
+
+*/
+/**
+ * Implements hook_entity_field_access().
+ *
+ * We want to make sure that fields aren't being seen or edited
+ * by those who shouldn't.
+ */
+function sistema_custom_entity_field_access($operation, FieldDefinitionInterface $field_definition, AccountInterface $account, FieldItemListInterface $items = NULL)
+{
+  // Fields that only admins should be able to see and edit.
+  $admin_fields = array(
+    'field_student_parent_uid',
+    'field_student_status',
+    'field_student_year_joined_sist',
+    'field_student_sist_teacher_first',
+    'field_student_sist_teacher_last',
+    'field_student_sist_teacher_tid',
+    'field_student_string_ensemble',
+    'field_student_pachanga_steelpan',
+    'field_student_choir',
+    'field_student_instrument',
+    'field_student_instrument_size',
+    'field_student_pref_instrument',
+    'field_student_conf_attending',
+    'field_student_room',
+  );
+  $view_not_edit_fields = array(
+    'title',
+  );
+
+  if ($field_definition->getTargetEntityTypeId() && in_array($field_definition->getName(), $admin_fields)) {
+    if ($account->hasPermission('administer admin fields', $account)) {
+      return AccessResult::allowed();
+    }
+    else if (in_array($field_definition->getName(), $view_not_edit_fields) && ($operation == 'view' and $account->hasPermission('view any viewonly fields'))) {
+      return AccessResult::allowed();
+    }
+    else {
+      return AccessResult::forbidden();
+    }
+  }
+  else {
+    return AccessResult::neutral();
+  }
+}

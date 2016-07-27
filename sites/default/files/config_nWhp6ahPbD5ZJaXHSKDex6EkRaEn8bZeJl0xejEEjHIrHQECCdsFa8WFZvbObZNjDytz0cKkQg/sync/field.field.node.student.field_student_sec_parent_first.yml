@@ -1,0 +1,19 @@
+uuid: fbcadb60-3f69-4d1b-9356-863426667d4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_sec_parent_first
+    - node.type.student
+id: node.student.field_student_sec_parent_first
+field_name: field_student_sec_parent_first
+entity_type: node
+bundle: student
+label: 'Second Parent First Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

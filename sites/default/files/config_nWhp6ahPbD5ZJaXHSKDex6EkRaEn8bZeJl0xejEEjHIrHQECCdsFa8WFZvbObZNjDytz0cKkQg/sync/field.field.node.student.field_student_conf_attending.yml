@@ -1,0 +1,21 @@
+uuid: b8cc14c8-06b2-48bc-8504-4caf8dce4d62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_conf_attending
+    - node.type.student
+  module:
+    - options
+id: node.student.field_student_conf_attending
+field_name: field_student_conf_attending
+entity_type: node
+bundle: student
+label: 'Confirmed Attending'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

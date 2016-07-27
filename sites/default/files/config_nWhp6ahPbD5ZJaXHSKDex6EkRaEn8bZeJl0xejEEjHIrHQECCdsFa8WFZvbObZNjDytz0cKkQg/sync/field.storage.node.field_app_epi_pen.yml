@@ -1,0 +1,27 @@
+uuid: 2acff2f0-2b02-473d-bb01-1b68c979c68f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_app_epi_pen
+field_name: field_app_epi_pen
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'yes'
+      label: 'Yes'
+    -
+      value: 'no'
+      label: 'No'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

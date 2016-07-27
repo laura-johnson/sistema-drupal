@@ -1,0 +1,40 @@
+uuid: b49986fa-df93-4d48-8124-363576b09a9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page
+  module:
+    - user
+id: user_login
+label: 'User login'
+variant: block_display
+variant_settings:
+  blocks:
+    8faf341e-9779-45f0-ae00-ba499f42543b:
+      id: user_login_block
+      label: 'User login'
+      provider: user
+      label_display: '0'
+      region: top
+      weight: 0
+      uuid: 8faf341e-9779-45f0-ae00-ba499f42543b
+      context_mapping: {  }
+  id: block_display
+  label: null
+  uuid: b2f814f6-451b-4aa5-ab28-4093ddc8f038
+  weight: 0
+  page_title: 'Welcome to Sistema registration!  Please log in or register for an account to submit new registrations.'
+page: home_page
+weight: 0
+selection_criteria:
+  b0e56630-0959-4e60-9f00-ff7db4951292:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: current_user
+    uuid: b0e56630-0959-4e60-9f00-ff7db4951292
+selection_logic: and
+static_context: {  }

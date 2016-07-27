@@ -1,0 +1,33 @@
+uuid: 95a0a896-5145-4435-8b62-986389ceac52
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_student_school
+field_name: field_student_school
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Military Trail'
+      label: 'Military Trail'
+    -
+      value: Parkdale
+      label: Parkdale
+    -
+      value: 'St. Martin de Porres'
+      label: 'St. Martin de Porres'
+    -
+      value: Yorkwoods
+      label: Yorkwoods
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

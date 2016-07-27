@@ -1,0 +1,19 @@
+uuid: 52dadd97-c8b7-4b56-ba00-aaa5aeddb187
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_app_list_allergies
+    - node.type.application
+id: node.application.field_app_list_allergies
+field_name: field_app_list_allergies
+entity_type: node
+bundle: application
+label: 'List Your Child’s Medical Conditions/Allergies'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

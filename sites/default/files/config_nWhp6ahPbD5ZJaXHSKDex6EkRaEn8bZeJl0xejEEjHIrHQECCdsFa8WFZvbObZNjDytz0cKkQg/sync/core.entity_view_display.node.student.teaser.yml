@@ -1,0 +1,17 @@
+uuid: 3e92fa0d-d5dc-4e05-bd00-e24ce4fa3243
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.student
+  module:
+    - user
+id: node.student.teaser
+targetEntityType: node
+bundle: student
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: 439fed51-48c5-4cc2-ab07-7b379550accc
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: sistema_students
+label: 'Sistema Students'
+use_admin_theme: null
+path: /sistema-students
+access_logic: and
+access_conditions:
+  d264ab25-7112-4c46-b300-d47b238874f6:
+    id: user_role
+    roles:
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: current_user
+    uuid: d264ab25-7112-4c46-b300-d47b238874f6
+parameters: {  }

@@ -1,0 +1,23 @@
+uuid: d0386bb3-0bdb-4400-8c02-0219927aeb5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_grade
+    - node.type.student
+id: node.student.field_student_grade
+field_name: field_student_grade
+entity_type: node
+bundle: student
+label: Grade
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

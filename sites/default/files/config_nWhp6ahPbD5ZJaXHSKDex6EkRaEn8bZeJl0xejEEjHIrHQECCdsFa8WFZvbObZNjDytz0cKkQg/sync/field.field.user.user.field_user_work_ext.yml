@@ -1,0 +1,20 @@
+uuid: 3b9ed727-a7ec-4697-8200-a76a5b149e43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_work_ext
+  module:
+    - user
+id: user.user.field_user_work_ext
+field_name: field_user_work_ext
+entity_type: user
+bundle: user
+label: 'Work extension'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

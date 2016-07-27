@@ -1,0 +1,25 @@
+uuid: c716c170-bfec-4f5e-b100-b5483b64a7e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_id
+    - node.type.application
+id: node.application.field_student_id
+field_name: field_student_id
+entity_type: node
+bundle: application
+label: Student
+description: 'Enter the first name, last name, or ID number of the student to associate this application with.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: students
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

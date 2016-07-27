@@ -1,0 +1,3 @@
+status: 1
+pattern: '[node:field_student_first] [node:field_student_last]'
+php: 0

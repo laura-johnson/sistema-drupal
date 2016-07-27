@@ -1,0 +1,21 @@
+uuid: 4fabd3c8-1075-4d06-8506-6ad6e9418be3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_instrument_size
+    - node.type.student
+  module:
+    - options
+id: node.student.field_student_instrument_size
+field_name: field_student_instrument_size
+entity_type: node
+bundle: student
+label: 'Instrument Size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

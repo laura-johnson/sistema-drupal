@@ -1,0 +1,21 @@
+uuid: 1a898bf8-2caf-4a66-9c07-7dfee36aa90c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_choir
+    - node.type.student
+  module:
+    - options
+id: node.student.field_student_choir
+field_name: field_student_choir
+entity_type: node
+bundle: student
+label: Choir
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 3eb6885c-3b10-44e9-bd09-9a710b265cf8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_student_rel_to_child
+field_name: field_student_rel_to_child
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,36 @@
+uuid: 3393d18f-9b2e-4d70-9700-c96f3c922095
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_student_teacher_title
+field_name: field_student_teacher_title
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Ms.
+      label: Ms.
+    -
+      value: Mrs.
+      label: Mrs.
+    -
+      value: Miss
+      label: Miss
+    -
+      value: Mr.
+      label: Mr.
+    -
+      value: Dr.
+      label: Dr.
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

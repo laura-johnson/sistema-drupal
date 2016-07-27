@@ -1,0 +1,19 @@
+uuid: 89b0e4ff-e62e-4da3-bc0f-1593f34d1fe8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_sist_teacher_last
+    - node.type.student
+id: node.student.field_student_sist_teacher_last
+field_name: field_student_sist_teacher_last
+entity_type: node
+bundle: student
+label: 'Sistema Teacher Last'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

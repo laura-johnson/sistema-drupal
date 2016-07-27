@@ -1,0 +1,23 @@
+uuid: 07dae41b-ee5b-451a-bf15-210a79793dc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_sist_teacher_tid
+    - node.type.student
+id: node.student.field_student_sist_teacher_tid
+field_name: field_student_sist_teacher_tid
+entity_type: node
+bundle: student
+label: 'Sistema Teacher ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

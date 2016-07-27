@@ -1,0 +1,35 @@
+uuid: d43b4ac2-83ea-4578-861b-279941047bda
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.sistema_students
+    - views.view.sistema_admin
+  module:
+    - views
+id: sistema_students
+label: 'Sistema Students'
+variant: block_display
+variant_settings:
+  blocks:
+    adcd5e1d-c588-45c3-bc00-ccb179a5815e:
+      id: 'views_block:sistema_admin-block_2'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: top
+      weight: 0
+      uuid: adcd5e1d-c588-45c3-bc00-ccb179a5815e
+      context_mapping: {  }
+  id: block_display
+  label: null
+  uuid: 8b96e56d-373c-48bc-883f-63a842add05f
+  weight: 0
+  page_title: 'Sistema Students'
+page: sistema_students
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

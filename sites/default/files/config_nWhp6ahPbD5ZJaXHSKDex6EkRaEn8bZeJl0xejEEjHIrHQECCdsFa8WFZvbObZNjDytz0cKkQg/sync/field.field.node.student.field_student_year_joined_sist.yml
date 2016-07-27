@@ -1,0 +1,19 @@
+uuid: 7efbd881-7914-4a10-8e62-98b8e7251de1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_year_joined_sist
+    - node.type.student
+id: node.student.field_student_year_joined_sist
+field_name: field_student_year_joined_sist
+entity_type: node
+bundle: student
+label: 'Year Joined Sistema'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

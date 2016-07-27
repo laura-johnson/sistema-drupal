@@ -1,0 +1,12 @@
+uuid: b682bc59-3119-45d2-992e-4658ac442f25
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: c4zaT5cyPxuTXI6JOWt3qRtMvICT9tHB6d9a5VG-CmQ
+id: feedback
+label: 'Website feedback'
+recipients:
+  - laura.j.johnson@gmail.com
+reply: ''
+weight: 0

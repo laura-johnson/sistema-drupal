@@ -1,0 +1,23 @@
+uuid: bc743cf7-a47e-4351-b008-8a6524457c52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_app_lending_policy
+    - node.type.application
+id: node.application.field_app_lending_policy
+field_name: field_app_lending_policy
+entity_type: node
+bundle: application
+label: 'I agree to the Instrument Lending Policy'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'I agree'
+  off_label: 'Off'
+field_type: boolean

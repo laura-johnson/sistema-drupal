@@ -1,0 +1,19 @@
+uuid: 5df90876-8ed9-4933-8904-4ae4938c56e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_rel_to_child
+    - node.type.student
+id: node.student.field_student_rel_to_child
+field_name: field_student_rel_to_child
+entity_type: node
+bundle: student
+label: 'Relationship of primary Sistema contact/guardian to student'
+description: (Mother/Father/Grandparent/etc)
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

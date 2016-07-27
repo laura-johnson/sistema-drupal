@@ -1,0 +1,19 @@
+uuid: 9662cc12-1094-433c-9f48-72ab0830229f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_sist_teacher_first
+    - node.type.student
+id: node.student.field_student_sist_teacher_first
+field_name: field_student_sist_teacher_first
+entity_type: node
+bundle: student
+label: 'Sistema Teacher First'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

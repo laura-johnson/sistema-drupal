@@ -1,0 +1,21 @@
+uuid: 39eb3605-ac7a-401a-bd01-1ef7767d8076
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_string_ensemble
+    - node.type.student
+  module:
+    - options
+id: node.student.field_student_string_ensemble
+field_name: field_student_string_ensemble
+entity_type: node
+bundle: student
+label: 'String Ensemble'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

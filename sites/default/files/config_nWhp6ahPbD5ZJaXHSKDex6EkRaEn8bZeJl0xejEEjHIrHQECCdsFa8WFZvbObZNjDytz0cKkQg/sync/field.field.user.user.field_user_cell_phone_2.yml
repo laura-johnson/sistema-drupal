@@ -1,0 +1,20 @@
+uuid: 50fb79b2-c8b7-47dd-af00-fa57afb0b3a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_cell_phone_2
+  module:
+    - user
+id: user.user.field_user_cell_phone_2
+field_name: field_user_cell_phone_2
+entity_type: user
+bundle: user
+label: 'Cell phone 2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

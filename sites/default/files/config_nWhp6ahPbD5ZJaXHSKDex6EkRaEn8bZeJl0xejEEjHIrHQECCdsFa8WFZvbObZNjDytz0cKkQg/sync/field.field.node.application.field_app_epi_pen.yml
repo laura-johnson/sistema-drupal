@@ -1,0 +1,21 @@
+uuid: 9e37ffe5-ae95-4968-b300-d2b55071d19e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_app_epi_pen
+    - node.type.application
+  module:
+    - options
+id: node.application.field_app_epi_pen
+field_name: field_app_epi_pen
+entity_type: node
+bundle: application
+label: 'Has Your Child Been Prescribed An Epi-Pen?'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

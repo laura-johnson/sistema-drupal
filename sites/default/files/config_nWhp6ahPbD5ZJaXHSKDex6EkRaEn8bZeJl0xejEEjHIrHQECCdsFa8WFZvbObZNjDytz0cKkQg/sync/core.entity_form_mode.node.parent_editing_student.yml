@@ -1,0 +1,10 @@
+uuid: d3dff8f5-59b1-4014-ad09-9aaca118538e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.parent_editing_student
+label: 'Parent editing student'
+targetEntityType: node
+cache: true

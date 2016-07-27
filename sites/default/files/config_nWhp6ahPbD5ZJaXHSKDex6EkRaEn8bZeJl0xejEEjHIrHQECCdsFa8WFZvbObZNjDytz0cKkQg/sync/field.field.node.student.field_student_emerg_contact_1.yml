@@ -1,0 +1,19 @@
+uuid: 14ff5421-a3ab-4dc4-b100-a0abb9fe947a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_emerg_contact_1
+    - node.type.student
+id: node.student.field_student_emerg_contact_1
+field_name: field_student_emerg_contact_1
+entity_type: node
+bundle: student
+label: 'Emergency Contact 1'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

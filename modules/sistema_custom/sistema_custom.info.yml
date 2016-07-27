@@ -1,0 +1,6 @@
+name: Sistema Custom
+type: module
+description: 'Custom functions for Sistema.'
+package: Custom
+core: 8.x
+hidden: false

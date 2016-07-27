@@ -1,0 +1,19 @@
+uuid: b8729995-9c39-49bc-bf05-5ec718c3f232
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_first
+    - node.type.student
+id: node.student.field_student_first
+field_name: field_student_first
+entity_type: node
+bundle: student
+label: 'Student First Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

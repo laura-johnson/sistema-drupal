@@ -1,0 +1,27 @@
+uuid: 4af37ca5-06da-4759-8c04-0473a40457e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_app_academic_release
+field_name: field_app_academic_release
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'yes'
+      label: 'I agree'
+    -
+      value: 'no'
+      label: 'I do not agree'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

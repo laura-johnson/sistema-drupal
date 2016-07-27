@@ -1,0 +1,24 @@
+sistema_custom.page:
+  path: 'application-page/{nid}'
+  defaults:
+    _controller: '\Drupal\sistema_custom\Controller\ApplicationPage::appPage'
+    _title: 'Application form'
+    nid: 'No content at this address'
+  requirements:
+    _permission: 'access content'
+sistema_custom.modal: 
+  path: 'application-page/modal'
+  defaults: 
+    _title: 'Modal' 
+    _controller: '\Drupal\sistema_custom\Controller\ApplicationPage::modal'
+  requirements:
+    _permission: 'access content' 
+sistema_custom.form:
+  path: 'application-form/{arg}'
+  defaults:
+    _form: '\Drupal\sistema_custom\Form\ApplicationForm'
+    _title: 'Application form'
+    arg: 'new'
+  requirements:
+#    _permission: 'create application content'
+    _access_sistema_student: 'TRUE'

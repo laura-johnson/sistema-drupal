@@ -1,0 +1,19 @@
+uuid: bba59191-35db-4726-9916-22f92dec16b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_auth_for_pickup
+    - node.type.student
+id: node.student.field_student_auth_for_pickup
+field_name: field_student_auth_for_pickup
+entity_type: node
+bundle: student
+label: 'People authorized to pick-up your child after program at 5:10pm or 5:45pm'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

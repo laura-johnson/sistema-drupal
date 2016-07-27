@@ -1,0 +1,19 @@
+uuid: 5e365c27-ced1-4a2b-8f54-84c23ddd8517
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_sec_parent_last
+    - node.type.student
+id: node.student.field_student_sec_parent_last
+field_name: field_student_sec_parent_last
+entity_type: node
+bundle: student
+label: 'Second Parent Last Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

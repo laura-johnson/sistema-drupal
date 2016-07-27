@@ -1,0 +1,250 @@
+uuid: 11bb283d-c0c2-4732-9800-f47d0587996d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.parent_editing_student
+    - field.field.node.student.field_student_allergies
+    - field.field.node.student.field_student_auth_for_pickup
+    - field.field.node.student.field_student_choir
+    - field.field.node.student.field_student_comments
+    - field.field.node.student.field_student_conf_attending
+    - field.field.node.student.field_student_dob
+    - field.field.node.student.field_student_emerg_1_rel
+    - field.field.node.student.field_student_emerg_2_rel
+    - field.field.node.student.field_student_emerg_contact_1
+    - field.field.node.student.field_student_emerg_contact_2
+    - field.field.node.student.field_student_emerg_number_1
+    - field.field.node.student.field_student_emerg_number_2
+    - field.field.node.student.field_student_first
+    - field.field.node.student.field_student_grade
+    - field.field.node.student.field_student_instrument
+    - field.field.node.student.field_student_instrument_size
+    - field.field.node.student.field_student_last
+    - field.field.node.student.field_student_pachanga_steelpan
+    - field.field.node.student.field_student_parent_uid
+    - field.field.node.student.field_student_pref_instrument
+    - field.field.node.student.field_student_rel_to_child
+    - field.field.node.student.field_student_room
+    - field.field.node.student.field_student_school
+    - field.field.node.student.field_student_sec_parent_first
+    - field.field.node.student.field_student_sec_parent_last
+    - field.field.node.student.field_student_sist_teacher_first
+    - field.field.node.student.field_student_sist_teacher_last
+    - field.field.node.student.field_student_sist_teacher_tid
+    - field.field.node.student.field_student_status
+    - field.field.node.student.field_student_string_ensemble
+    - field.field.node.student.field_student_teacher_last
+    - field.field.node.student.field_student_teacher_title
+    - field.field.node.student.field_student_year_joined_sist
+    - node.type.student
+  module:
+    - path
+id: node.student.parent_editing_student
+targetEntityType: node
+bundle: student
+mode: parent_editing_student
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  field_student_auth_for_pickup:
+    weight: 55
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  field_student_choir:
+    weight: 56
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_student_comments:
+    weight: 52
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  field_student_emerg_contact_1:
+    weight: 49
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_student_emerg_contact_2:
+    weight: 51
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_student_emerg_number_1:
+    weight: 48
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_student_emerg_number_2:
+    weight: 50
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_student_first:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_student_grade:
+    weight: 61
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  field_student_instrument:
+    weight: 44
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_student_instrument_size:
+    weight: 45
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_student_last:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_student_pachanga_steelpan:
+    weight: 57
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_student_pref_instrument:
+    weight: 54
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_student_room:
+    weight: 38
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_student_school:
+    weight: 59
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_student_sec_parent_first:
+    weight: 46
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_student_sec_parent_last:
+    weight: 47
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_student_sist_teacher_first:
+    weight: 35
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_student_sist_teacher_last:
+    weight: 36
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_student_sist_teacher_tid:
+    weight: 37
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  field_student_status:
+    weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_student_string_ensemble:
+    weight: 43
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_student_teacher_last:
+    weight: 42
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_student_teacher_title:
+    weight: 41
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_student_year_joined_sist:
+    weight: 60
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_student_allergies: true
+  field_student_conf_attending: true
+  field_student_dob: true
+  field_student_emerg_1_rel: true
+  field_student_emerg_2_rel: true
+  field_student_parent_uid: true
+  field_student_rel_to_child: true
+  title: true

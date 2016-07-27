@@ -1,0 +1,36 @@
+uuid: e00da05a-ea39-4bde-a35f-95c3cb0d0da9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_student_string_ensemble
+field_name: field_student_string_ensemble
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Beginner Violin'
+      label: 'Beginner Violin'
+    -
+      value: 'Violin 1'
+      label: 'Violin 1'
+    -
+      value: 'Violin 2/viola'
+      label: 'Violin 2/viola'
+    -
+      value: 'Junior Orchestra'
+      label: 'Junior Orchestra'
+    -
+      value: 'Senior Orchestra'
+      label: 'Senior Orchestra'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

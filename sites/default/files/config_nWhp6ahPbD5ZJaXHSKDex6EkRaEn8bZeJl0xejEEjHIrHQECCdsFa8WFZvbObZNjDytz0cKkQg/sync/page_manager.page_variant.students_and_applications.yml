@@ -1,0 +1,35 @@
+uuid: efbb26b8-e2df-46ba-bd33-51c14b8b8c30
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.sistema_admin
+    - views.view.sistema_admin
+  module:
+    - views
+id: students_and_applications
+label: Applications
+variant: block_display
+variant_settings:
+  blocks:
+    a60bce40-f06d-40da-8a06-06a7a20d59a3:
+      id: 'views_block:sistema_admin-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: top
+      weight: 0
+      uuid: a60bce40-f06d-40da-8a06-06a7a20d59a3
+      context_mapping: {  }
+  id: block_display
+  label: null
+  uuid: e41770d7-675b-4c63-b419-25ef32f88729
+  weight: 0
+  page_title: Applications
+page: sistema_admin
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

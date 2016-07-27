@@ -1,0 +1,21 @@
+uuid: 545bfa7e-8ab3-4b73-a000-e7f7d6ed4a27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_teacher_title
+    - node.type.student
+  module:
+    - options
+id: node.student.field_student_teacher_title
+field_name: field_student_teacher_title
+entity_type: node
+bundle: student
+label: 'Teacher Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

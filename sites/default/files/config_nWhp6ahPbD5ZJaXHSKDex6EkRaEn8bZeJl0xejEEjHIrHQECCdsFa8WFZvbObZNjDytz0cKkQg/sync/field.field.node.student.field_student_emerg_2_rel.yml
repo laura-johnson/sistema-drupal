@@ -1,0 +1,19 @@
+uuid: c4da8ecb-01a8-4c8e-aa00-0c88ac765000
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_emerg_2_rel
+    - node.type.student
+id: node.student.field_student_emerg_2_rel
+field_name: field_student_emerg_2_rel
+entity_type: node
+bundle: student
+label: 'Emergency Contact 2 relationship to student'
+description: (Mother/Father/Grandparent/etc)
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

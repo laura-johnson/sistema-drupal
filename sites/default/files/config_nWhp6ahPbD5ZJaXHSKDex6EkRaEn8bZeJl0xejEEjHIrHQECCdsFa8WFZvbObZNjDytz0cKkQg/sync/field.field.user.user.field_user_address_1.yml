@@ -1,0 +1,20 @@
+uuid: 817ce990-51a6-433d-9401-1b26f450e412
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_address_1
+  module:
+    - user
+id: user.user.field_user_address_1
+field_name: field_user_address_1
+entity_type: user
+bundle: user
+label: 'Address 1'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
