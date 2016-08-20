@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\email_registration\Tests\EmailRegistrationTestCase.
- */
-
 namespace Drupal\email_registration\Tests;
 
 use Drupal\simpletest\WebTestBase;
@@ -26,7 +21,7 @@ class EmailRegistrationTestCase extends WebTestBase {
   /**
    * Test various behaviors for anonymous users.
    */
-  function testRegistration() {
+  public function testRegistration() {
     $user_config = $this->container->get('config.factory')->getEditable('user.settings');
     $user_config
       ->set('verify_mail', FALSE)
@@ -66,6 +61,27 @@ class EmailRegistrationTestCase extends WebTestBase {
     );
     $this->drupalPostForm('/user/register', $register, t('Create new account'));
     $this->assertRaw('Registration successful. You are now logged in.', t('User properly created, immediately logged in.'));
+
+    // Test email_registration_unique_username().
+    $this->drupalLogout();
+    $user_config
+      ->set('verify_mail', FALSE)
+      ->set('register', USER_REGISTER_VISITORS)
+      ->save();
+    $name = $this->randomMachineName(32);
+    $pass = $this->randomString(10);
+
+    $this->createUser(array(), $name);
+    $next_unique_name = email_registration_unique_username($name);
+
+    $register = array(
+      'mail' => $name . '@example2.com',
+      'pass[pass1]' => $pass,
+      'pass[pass2]' => $pass,
+    );
+    $this->drupalPostForm('/user/register', $register, t('Create new account'));
+    $account = user_load_by_mail($register['mail']);
+    $this->assertTrue($next_unique_name === $account->getAccountName());
   }
 
 }
