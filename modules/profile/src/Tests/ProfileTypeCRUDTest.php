@@ -1,15 +1,9 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\profile\Tests\ProfileTypeCRUDTest.
- */
-
 namespace Drupal\profile\Tests;
 
 use Drupal\Component\Render\FormattableMarkup;
 use Drupal\Component\Utility\Unicode;
-use Drupal\Core\Url;
 
 /**
  * Tests basic CRUD functionality of profile types.

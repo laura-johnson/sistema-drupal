@@ -1,11 +1,8 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\profile\Tests\ProfileRoleAccessTest.
- */
-
 namespace Drupal\profile\Tests;
+
+use Drupal\Core\Session\AccountInterface;
 
 /**
  * Tests profile role access handling.
@@ -70,6 +67,19 @@ class ProfileRoleAccessTest extends ProfileTestBase {
     // Test user without role can access add profile form.
     // Expected: User can access form.
     $this->drupalGet("user/{$web_user1->id()}/{$this->type->id()}");
+    $this->assertResponse(200);
+  }
+
+  public function testLockedRoles() {
+    $locked_role_type = $this->createProfileType(NULL, NULL, FALSE, [AccountInterface::AUTHENTICATED_ROLE]);
+
+    // Create user with add own profile permissions.
+    $web_user1 = $this->drupalCreateUser(["add own {$locked_role_type->id()} profile"]);
+    $this->drupalLogin($web_user1);
+
+    // Test user without role can access add profile form.
+    // Expected: User can access form.
+    $this->drupalGet("user/{$web_user1->id()}/{$locked_role_type->id()}");
     $this->assertResponse(200);
   }
 

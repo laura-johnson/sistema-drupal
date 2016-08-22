@@ -1,18 +1,11 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\profile\ProfileTestTrait.
- */
-
 namespace Drupal\profile\Tests;
 
 use Drupal\profile\Entity\ProfileTypeInterface;
 use Drupal\profile\Entity\ProfileType;
 use Drupal\profile\Entity\Profile;
 use Drupal\user\UserInterface;
-use Drupal\user\Entity\User;
-use Drupal\Component\Utility\Unicode;
 
 /**
  * Provides methods to create additional profiles and profile_types.

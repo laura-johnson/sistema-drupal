@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\profile\Tests\ProfileTabTest.
- */
-
 namespace Drupal\profile\Tests;
 
 use Drupal\Component\Render\FormattableMarkup;
@@ -12,7 +7,6 @@ use Drupal\Core\Url;
 use Drupal\profile\Entity\Profile;
 use Drupal\profile\Entity\ProfileType;
 use Drupal\user\Entity\User;
-use Drupal\system\Tests\Menu\LocalTasksTest;
 
 /**
  * Tests tab functionality of profiles.
