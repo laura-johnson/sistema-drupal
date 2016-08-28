@@ -1,3 +1,5 @@
+<link href="https://fonts.googleapis.com/css?family=Cabin+Condensed|Open+Sans" rel="stylesheet"> 
+
 /**
  * @file
  * CSS for Sistema.
@@ -22,10 +24,28 @@ background: #f7f7f7;
 margin-bottom: 25px;
 }
 
-.region-secondary-menu .menu-item a {
-color: #45b0e7 !important;
-font-size: 16px !important;
+#block-sistema-branding {
+height: 100px;
 }
+
+#block-sistema-branding {
+height: 100px;
+}
+
+#block-sistema-branding img {
+height: 120px;
+position: relative;
+top: -10px;
+}
+
+#header {
+background-image: url(../images/sistemakidsbg.jpg);
+}
+
+.region-primary-menu {
+margin-top: -10px;
+}
+
 
 .node--type-student h2, .node--type-student .field__label {
 color: #565656;
@@ -56,4 +76,45 @@ background: #d9d8eb;
 .student-emerg-contact-2 {
 background: #e7ccc0;
 
+}
+
+.content {
+font-family: 'Open Sans', sans-serif;
+}
+
+.content h1, .heading-a {
+font-family: 'Cabin Condensed', sans-serif;
+color: #25bdad !important;
+font-size: 150%;
+}
+
+.content h2 {
+font-size: 120%;
+}
+
+body {
+   font-size: 100%;
+   line-height: 1.5;
+}
+
+.region-primary-menu .menu a {
+padding: 0.65em 0.8em 0.5em 0.8em;
+
+}
+
+
+.region-header .block-menu li a {
+    background: rgba(255, 255, 255, 0.4);
+    border-bottom: solid 1px rgba(255, 255, 255, 0.6);
+    font-size: 110%;
+    color: #363636;
+}
+
+.region-header .block-menu li a:hover {
+    background: rgba(255, 255, 255, 0.6);
+    border-bottom: solid 1px rgba(255, 255, 255, 0.8);
+}
+
+.header {
+min-height: 150px;
 }
