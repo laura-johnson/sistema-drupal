@@ -258,6 +258,7 @@ class ApplicationForm extends FormBase {
       '#type' => 'number',
       '#title' => t('Adults'),
       '#default_value' => $Student->field_student_dem_adults->value,
+      '#prefix' => t('Although this information is optional, it will allow us to assess the financial need of the applicant. If you have any special circumstances you would like us to consider, please indicate below.'),
     );
     $form['demographic']['children'] = array(
       '#type' => 'number',
@@ -589,7 +590,7 @@ function SistemaMail($mailtype, $studentfirst, $studentname, $school) {
   
     $subject = t('You successfully submitted a Sistema Toronto application for @studentname', array('@studentname' => $studentname));
   
-    $body = t(
+    $body = Html::escape(
       
       'Thank you for submitting a Sistema Toronto 2017/18 registration for:
 <br><br>
@@ -614,7 +615,7 @@ The Sistema Toronto Team', array(
   
     $subject = t('You successfully submitted a Sistema Toronto renewal for @studentname', array('@studentname' => $studentname));
   
-    $body = t(
+    $body = Html::escape(
       
       'Thank you for submitting a Sistema Toronto 2017/18 renewal for:
 <br><br>
