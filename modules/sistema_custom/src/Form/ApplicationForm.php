@@ -274,7 +274,7 @@ class ApplicationForm extends FormBase {
       '#title' => t('Languages spoken at home'),
       '#default_value' => $Student->field_student_dem_languages->value,
     );
-    $form['demographic']['circumstances'] = array(
+    $form['demographic']['circ'] = array(
       '#type' => 'textarea',
       '#title' => t('Are there any special circumstances you would like us to consider?'),
       '#default_value' => $Student->field_student_dem_circ->value,
