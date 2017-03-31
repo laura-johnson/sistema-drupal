@@ -1,104 +1,126 @@
-<link href="https://fonts.googleapis.com/css?family=Cabin+Condensed|Open+Sans" rel="stylesheet"> 
-
+@import url('https://fonts.googleapis.com/css?family=Hind');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 /**
  * @file
  * CSS for Sistema.
  */
+
 .form-item {
-margin-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
 
-.form-item input {
-max-width: 300px !important;
+.form-item input, .form-item select {
+    max-width: 300px !important;
+    height: 2.5rem;
+    border-radius: 3px;
+}
+
+.form-item textarea {
+    border-radius: 3px;
+}
+
+.form-type-radio label, .form-type-checkbox label {
+    position: relative;
+    top: -12px;
+}
+
+.form-item label {
+    font-size: 1.1rem;
 }
 
 .form-submit {
-margin-top: 1em;
+    margin-top: 1em;
 }
 
 fieldset {
-background: #f7f7f7;
+    background: #f7f7f7;
 }
 
 .view-students .view-content {
-margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 #block-sistema-branding {
-height: 100px;
+    height: 100px;
 }
 
 #block-sistema-branding {
-height: 100px;
+    height: 100px;
 }
 
 #block-sistema-branding img {
-height: 120px;
-position: relative;
-top: -10px;
+    height: 120px;
+    position: relative;
+    top: -10px;
 }
 
 #header {
-background-image: url(../images/sistemakidsbg.jpg);
+    background-image: url(../images/sistemakidsbg.jpg);
 }
 
 .region-primary-menu {
-margin-top: -10px;
+    margin-top: -10px;
 }
 
 
 .node--type-student h2, .node--type-student .field__label {
-color: #565656;
+    color: #565656;
 }
 
 .student-info, .student-sistema-info, .student-second-parent, .student-emerg-contact-1, .student-emerg-contact-2 {
-padding: 2px 25px 25px 25px;
-border-radius: 25px;
-margin-bottom: 15px;
+    padding: 2px 25px 25px 25px;
+    border-radius: 25px;
+    margin-bottom: 15px;
 }
 
 .student-info {
-background: #f2e3ca;
+    background: #f2e3ca;
 }
 
 .student-sistema-info {
-background: #c0dee7;
+    background: #c0dee7;
 }
 
 .student-second-parent {
-background: #c2e7c0;
+    background: #c2e7c0;
 }
 
 .student-emerg-contact-1 {
-background: #d9d8eb;
+    background: #d9d8eb;
 }
 
 .student-emerg-contact-2 {
-background: #e7ccc0;
+    background: #e7ccc0;
 
 }
 
 .content {
-font-family: 'Open Sans', sans-serif;
+    font-family: 'Hind', sans-serif;
+}
+
+#content .section {
+    margin: 0 1rem 0 1rem;
 }
 
 .content h1, .heading-a {
-font-family: 'Cabin Condensed', sans-serif;
-color: #25bdad !important;
-font-size: 150%;
+    font-family: 'Roboto', sans-serif;
+    color: #25bdad !important;
+    font-size: 1.4rem; /* =14px */
+    text-transform: uppercase;
 }
 
 .content h2 {
-font-size: 120%;
+    font-size: 1.2rem; /* =12px */
+    text-transform: uppercase;
 }
 
 body {
-   font-size: 100%;
-   line-height: 1.5;
+    font-size: 100%;
+    line-height: 1.5;
 }
 
 .region-primary-menu .menu a {
-padding: 0.65em 0.8em 0.5em 0.8em;
+    padding: 0.65em 0.8em 0.5em 0.8em;
 
 }
 
@@ -116,5 +138,12 @@ padding: 0.65em 0.8em 0.5em 0.8em;
 }
 
 .header {
-min-height: 150px;
+    min-height: 150px;
+}
+
+.sistema-info-block {
+    background-color: antiquewhite;
+    border-radius: 7px;
+    padding: 0.5rem .8rem 0.5rem .8rem;
+    font-size: .8rem;
 }

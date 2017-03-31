@@ -66,14 +66,14 @@ class ApplicationForm extends FormBase {
       '#type' => 'textfield',
       '#title' => t('Relationship to student'),
       '#required' => TRUE,
-      '#suffix' => 'Mother/Father/Grandparent/etc',
+      '#attributes' => array('placeholder' => 'Mother/Father/Grandparent/etc'),
       '#default_value' => $Student->field_student_rel_to_child->value,
     );
     $form['dob'] = array(
       '#type' => 'textfield',
       '#title' => t('Student date of birth'),
       '#required' => TRUE,
-      '#suffix' => 'YYYY-MM-DD',
+      '#attributes' => array('placeholder' => 'YYYY-MM-DD'),
       '#default_value' => $Student->field_student_dob->value,
     );
     $form['school'] = array(
@@ -93,7 +93,7 @@ class ApplicationForm extends FormBase {
       '#title' => t('Current Grade'),
       '#required' => TRUE,
       '#default_value' => $Student->field_student_grade->value,
-      '#suffix' => 'Enter 0 for SK',
+      '#attributes' => array('placeholder' => 'Enter 0 for SK'),
     );
     $form['teacher_title'] = array(
       '#type' => 'select',
@@ -151,19 +151,19 @@ class ApplicationForm extends FormBase {
       '#type' => 'textfield',
       '#title' => t('Second parent primary phone'),
       '#default_value' => $Student->field_student_sec_parent_pp->value,
-      '#suffix' => 'xxx-xxx-xxxx',
+      '#attributes' => array('placeholder' => 'xxx-xxx-xxxx'),
     );
     $form['second_parent']['second_parent_wp'] = array(
       '#type' => 'textfield',
       '#title' => t('Second parent work phone'),
       '#default_value' => $Student->field_student_sec_parent_wp->value,
-      '#suffix' => 'xxx-xxx-xxxx',
+      '#attributes' => array('placeholder' => 'xxx-xxx-xxxx'),
     );
     $form['second_parent']['second_parent_cp'] = array(
       '#type' => 'textfield',
       '#title' => t('Second parent cell phone'),
       '#default_value' => $Student->field_student_sec_parent_cp->value,
-      '#suffix' => 'xxx-xxx-xxxx',
+      '#attributes' => array('placeholder' => 'xxx-xxx-xxxx'),
     );
     $form['auth_pickup'] = array(
       '#type' => 'textarea',
@@ -186,13 +186,13 @@ class ApplicationForm extends FormBase {
       '#title' => t('Emergency contact 1 number'),
       '#required' => TRUE,
       '#default_value' => $Student->field_student_emerg_number_1->value,
-      '#suffix' => 'xxx-xxx-xxxx',
+      '#attributes' => array('placeholder' => 'xxx-xxx-xxxx'),
     );
     $form['emerg_1']['emerg_1_rel'] = array(
       '#type' => 'textfield',
       '#title' => t('Emergency contact 1 relationship to student'),
       '#required' => TRUE,
-      '#suffix' => 'Mother/Father/Grandparent/etc',
+      '#attributes' => array('placeholder' => 'Mother/Father/Grandparent/etc'),
       '#default_value' => $Student->field_student_emerg_1_rel->value,
     );
     $form['emerg_2'] = array (
@@ -208,7 +208,7 @@ class ApplicationForm extends FormBase {
       '#type' => 'textfield',
       '#title' => t('Emergency contact 2 number'),
       '#default_value' => $Student->field_student_emerg_number_2->value,
-      '#suffix' => 'xxx-xxx-xxxx',
+      '#attributes' => array('placeholder' => 'xxx-xxx-xxxx'),
     );
     $form['emerg_2']['emerg_2_rel'] = array(
       '#type' => 'textfield',
