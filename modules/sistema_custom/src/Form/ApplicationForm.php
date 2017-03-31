@@ -21,7 +21,7 @@ use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\OpenModalDialogCommand;
 use Drupal\Core\Ajax;
 use Drupal\Core\Url;
-use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Component\Utility\Html;
 
 
 /**
