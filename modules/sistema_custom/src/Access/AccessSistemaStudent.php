@@ -23,7 +23,7 @@ class AccessSistemaStudent implements AccessInterface {
 
     $student = Node::load($arg);
     if ($account) {
-      if ($student->field_student_parent_uid->target_id > 1 && $student->field_student_parent_uid->target_id == $account->id()) {
+      if ($student->field_student_parent_uid->target_id > 0 && $student->field_student_parent_uid->target_id == $account->id()) {
         $access = AccessResult::allowed();
       }
       elseif ($arg == 'new' && $account->hasPermission('create application content')) {
