@@ -213,7 +213,7 @@ class ApplicationForm extends FormBase {
     $form['emerg_2']['emerg_2_rel'] = array(
       '#type' => 'textfield',
       '#title' => t('Emergency contact 2 relationship to student'),
-      '#suffix' => 'Mother/Father/Grandparent/etc',
+      '#attributes' => array('placeholder' => 'Mother/Father/Grandparent/etc'),
       '#default_value' => $Student->field_student_emerg_2_rel->value,
     );
     $form['allergies'] = array(
