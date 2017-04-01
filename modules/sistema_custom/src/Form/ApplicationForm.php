@@ -76,6 +76,13 @@ class ApplicationForm extends FormBase {
       '#attributes' => array('placeholder' => 'YYYY-MM-DD'),
       '#default_value' => $Student->field_student_dob->value,
     );
+    $form['oen'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Ontario Education Number'),
+      '#required' => TRUE,
+      '#suffix' => t('This information is listed on your child’s report card.'),
+      '#default_value' => $Student->field_student_oen->value,
+    );
     $form['school'] = array(
       '#type' => 'select',
       '#title' => t('School'),
@@ -89,11 +96,15 @@ class ApplicationForm extends FormBase {
       '#default_value' => $Student->field_student_school->value,
     );
     $form['grade'] = array(
-      '#type' => 'number', // MAKE NUMBER FIELD ======
+      '#type' => 'select', // MAKE NUMBER FIELD ======
       '#title' => t('Current Grade'),
       '#required' => TRUE,
       '#default_value' => $Student->field_student_grade->value,
-      '#attributes' => array('placeholder' => 'Enter 0 for SK'),
+      '#options' => array ('' => '- Select -',
+        0 => 'SK',
+        1 => '1',
+        2 => '2',
+      ),
     );
     $form['teacher_title'] = array(
       '#type' => 'select',
@@ -257,7 +268,7 @@ class ApplicationForm extends FormBase {
       '#type' => 'number',
       '#title' => t('Adults'),
       '#default_value' => $Student->field_student_dem_adults->value,
-      '#prefix' => t('Although this information is optional, it will allow us to assess the financial need of the applicant. If you have any special circumstances you would like us to consider, please indicate below.'),
+      '#prefix' => t('Although this information is optional, it will allow us to better understand the families who participate in our programs and help us with our fundraising efforts. If you have any financial or personal circumstances that you would like to share, please indicate below.'),
     );
     $form['demographic']['children'] = array(
       '#type' => 'number',
@@ -266,7 +277,7 @@ class ApplicationForm extends FormBase {
     );
     $form['demographic']['income'] = array(
       '#type' => 'number',
-      '#title' => t('Gross family income'),
+      '#title' => t('Annual family income (before taxes)'),
       '#default_value' => $Student->field_student_dem_income->value,
     );
     $form['demographic']['languages'] = array(
@@ -477,6 +488,7 @@ class ApplicationForm extends FormBase {
     $student->field_student_first->value = $field['first'];
     $student->field_student_last->value = $field['last'];
     $student->field_student_dob->value = $field['dob'];
+    $student->field_student_oen->value = $field['oen'];
     $student->field_student_school->value = $field['school'];
     $student->field_student_grade->value = $field['grade'];
     $student->field_student_teacher_title->value = $field['teacher_title'];
@@ -532,22 +544,19 @@ class ApplicationForm extends FormBase {
     $application->field_student_id->target_id = $student->nid->value;
     $application->save();
     
-    $studentfirst = $field['first'];
     $studentname = $field['first'] . ' ' . $field['last'];
-    $school = $field['school'];
     
     if ($student->field_student_status->value == 'Attending 17/18') {
       $mailtype = 'ReturningStudent';
-      drupal_set_message($studentname . ' is now enrolled in the Sistema Toronto 2017/18 program.');
+      drupal_set_message('You have submitted a Student Renewal for' . $studentname . '. An email notification has been sent to ' . \Drupal::currentUser()->getEmail() . '.');
     }
     else {
       $mailtype = 'NewStudent';
-      drupal_set_message('You have submitted an application for ' . $studentname . '. We will be in touch by the end of April to let you know the status of your application.');
+      drupal_set_message('You have submitted an application for ' . $studentname . '. We will be in touch in early June 2017 to let you know the status of your application.');
     }
     //Send email
-    // drupal_set_message('Nid:' . $student->nid->value);
     
-    SistemaMail($mailtype, $studentfirst, $studentname, $school);
+    SistemaMail($mailtype, $studentname);
     
     //Redirect to front page
     
@@ -576,7 +585,7 @@ function gradeHelper($dob) {
 }
 
 
-function SistemaMail($mailtype, $studentfirst, $studentname, $school) {
+function SistemaMail($mailtype, $studentname) {
   
   $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
   $userfirst = $user->get('field_user_first')->value;
@@ -591,20 +600,19 @@ function SistemaMail($mailtype, $studentfirst, $studentname, $school) {
   
     $body = '<p>' . t('Thank you for submitting a Sistema Toronto 2017/18 registration for:') . '</p>'
        . '<p>' . t('@studentname', array('@studentname' => $studentname)) . '</p>'
-       . '<p>' .t('Though we would love to accept all new applicants, space in our program is limited. The Sistema Toronto Academy will, at its discretion, accept a number of students from Grades One to Three in 2017-18. Students will be chosen by school recommendation and/or witnessed lottery in consultation with school principal and teachers. When all places are filled, the remaining names will be placed on a waiting list in their lottery order. The list of names will not be maintained after November 1, 2017. Students/parents will be notified if their child is accepted or wait listed by May 26, 2017.') . '</p>'
-       . '<p>' . t('Thank-you,') . '</p>'
-       . '<p>' . t('The Sistema Toronto Team.') . '</p>';
+       . '<p>' .t('Though we would love to accept all new applicants, space in our program is limited. The Sistema Toronto Academy will, at its discretion, accept a number of students from Grades One to Three in 2017-18. Students will be chosen by school recommendation and/or witnessed lottery in consultation with school principal and teachers. When all places are filled, the remaining names will be placed on a waiting list in their lottery order. The list of names will not be maintained after November 1, 2017. Parents will be notified if their child is accepted or wait listed in early June 2017.') . '</p>'
+       . '<p>' . t('Thank you,') . '</p>'
+       . '<p>' . t('Sistema Toronto.') . '</p>';
   }
   
   if ($mailtype == 'ReturningStudent') {
   
-    $subject = t('You successfully submitted a Sistema Toronto renewal for @studentname', array('@studentname' => $studentname));
+    $subject = t('You successfully submitted a Sistema Toronto student renewal for @studentname', array('@studentname' => $studentname));
   
-    $body = '<p>' . t('Thank you for submitting a Sistema Toronto 2017/18 renewal for:') . '</p>'
-      . '<p>' . t('@studentname', array('@studentname' => $studentname)) . '</p>'
-      . '<p>' .t('Our office will be in touch in June 2017 to confirm September program start dates. If you have any questions or concerns, please contact info@sistema-toronto.ca.') . '</p>'
-      . '<p>' . t('Thank-you,') . '</p>'
-      . '<p>' . t('The Sistema Toronto Team.') . '</p>';
+    $body = '<p>' . t('Thank you for submitting a Sistema Toronto 2017/18 renewal for @studentname.', array('@studentname' => $studentname)) . '</p>'
+      . '<p>' .t('We are glad you will be returning for another year with us! We will be in touch before the end of the school year to let you know the startup dates for September. If you have any questions or concerns, please email info@sistema-toronto.ca, or call our office at 416-545-0200 to talk to your Centre Director.') . '</p>'
+      . '<p>' . t('Thank you,') . '</p>'
+      . '<p>' . t('Sistema Toronto.') . '</p>';
   }
   
   simple_mail_send($from, $to, $subject, $body);
