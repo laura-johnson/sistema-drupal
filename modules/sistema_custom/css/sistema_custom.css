@@ -1,0 +1,33 @@
+.form-item label.error {
+    position: relative;
+    background: #c2e1f5;
+    padding: 10px;
+    top: 12px;
+    max-width: 280px;
+    border-radius: 3px;
+}
+
+.form-item label.error:after, .form-item label.error:before {
+    bottom: 100%;
+    left: 10%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.form-item label.error:after {
+    border-color: rgba(37, 189, 173, 0);
+    border-bottom-color: #c2e1f5;
+    border-width: 6px;
+    margin-left: -6px;
+}
+
+.form-item label.error:before {
+    border-color: rgba(50, 255, 233, 0);
+    border-bottom-color: #c2e1f5;
+    border-width: 12px;
+    margin-left: -12px;
+}

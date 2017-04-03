@@ -1,0 +1,10 @@
+sistema_custom:
+  version: 1.x
+  css:
+    theme:
+      css/sistema_custom.css: {}
+  js:
+    js/jquery.validate.js: {}
+    js/sistema_custom.js: {}
+  dependencies:
+    - core/jquery

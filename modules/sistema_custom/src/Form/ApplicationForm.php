@@ -45,6 +45,7 @@ class ApplicationForm extends FormBase {
     // print '<pre>';
     // print_r($form['medical']['medical_waiver']);
     // print '</pre>';
+    $form['#attached']['library'][] = 'sistema_custom/sistema_custom';
     $form['student_nid'] = array(
       '#type' => 'hidden',
       '#title' => t('Student NID - to be hidden'),
