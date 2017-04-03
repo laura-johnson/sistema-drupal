@@ -610,7 +610,7 @@ function SistemaMail($mailtype, $studentname) {
     $subject = t('You successfully submitted a Sistema Toronto student renewal for @studentname', array('@studentname' => $studentname));
   
     $body = '<p>' . t('Thank you for submitting a Sistema Toronto 2017/18 renewal for @studentname.', array('@studentname' => $studentname)) . '</p>'
-      . '<p>' .t('We are glad you will be returning for another year with us! We will be in touch before the end of the school year to let you know the startup dates for September. If you have any questions or concerns, please email info@sistema-toronto.ca, or call our office at 416-545-0200 to talk to your Centre Director.') . '</p>'
+      . '<p>' .t('We are glad you will be returning for another year with us! We will be in touch before the end of the school year to let you know the startup dates for September. If you have any questions or concerns, please email info@sistema-toronto.ca, call our office at 416-545-0200, or speak to your Centre Director.') . '</p>'
       . '<p>' . t('Thank you,') . '</p>'
       . '<p>' . t('Sistema Toronto.') . '</p>';
   }
