@@ -600,7 +600,7 @@ function SistemaMail($mailtype, $studentname) {
     $subject = t('You successfully submitted a Sistema Toronto application for @studentname', array('@studentname' => $studentname));
   
     $body = '<p>' . t('Thank you for submitting a Sistema Toronto 2017/18 registration for @studentname.', array('@studentname' => $studentname)) . '</p>'
-       . '<p>' .t('Though we would love to accept all new applicants, space in our program is limited. The Sistema Toronto Academy will, at its discretion, accept a number of students from Grades One to Three in 2017-18. Students will be chosen by school recommendation and/or witnessed lottery in consultation with school principal and teachers. When all places are filled, the remaining names will be placed on a waiting list in their lottery order. The list of names will not be maintained after November 1, 2017. Parents will be notified if their child is accepted or wait listed in early June 2017.') . '</p>'
+       . '<p>' .t('Though we would love to accept all new applicants, space in our program is limited. The  Sistema Toronto Academy will, at its discretion, accept 12-5 students entering grades 1 to 3 in 2017-18 (currently enrolled in SK, Grade 1 or Grade 2). Students will be chosen by school recommendation and/or witnessed lottery in consultation with school principal and teachers. When all places are filled, the remaining names will be placed on a waiting list in their lottery order. The list of names will not be maintained after November 1, 2017. Parents will be notified if their child is accepted or wait listed in early June 2017.') . '</p>'
        . '<p>' . t('Thank you,') . '</p>'
        . '<p>' . t('Sistema Toronto.') . '</p>';
   }
