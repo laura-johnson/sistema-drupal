@@ -1,7 +1,7 @@
 .form-item label.error {
     position: relative;
     background: #c2e1f5;
-    padding: 10px;
+    padding: 7px 10px 6px 10px;
     top: 12px;
     max-width: 280px;
     border-radius: 3px;
