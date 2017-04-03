@@ -96,17 +96,37 @@ class ApplicationForm extends FormBase {
       ),//TODO: GET OPTS FROM CT =======
       '#default_value' => $Student->field_student_school->value,
     );
-    $form['grade'] = array(
-      '#type' => 'select', // MAKE NUMBER FIELD ======
-      '#title' => t('Current Grade'),
-      '#required' => TRUE,
-      '#default_value' => $Student->field_student_grade->value,
-      '#options' => array ('' => '- Select -',
-        0 => 'SK',
-        1 => '1',
-        2 => '2',
-      ),
-    );
+    if (!empty($StudentNid) && $StudentNid !== 'new') {
+      $form['grade'] = array(
+        '#type' => 'select', // MAKE NUMBER FIELD ======
+        '#title' => t('Current Grade'),
+        '#required' => TRUE,
+        '#default_value' => $Student->field_student_grade->value,
+        '#options' => array ('' => '- Select -',
+          0 => 'SK',
+          1 => '1',
+          2 => '2',
+          3 => '3',
+          4 => '4',
+          5 => '5',
+          6 => '6',
+          7 => '7',
+        ),
+      );
+    }
+    else {
+      $form['grade'] = array(
+        '#type' => 'select', // MAKE NUMBER FIELD ======
+        '#title' => t('Current Grade'),
+        '#required' => TRUE,
+        '#default_value' => $Student->field_student_grade->value,
+        '#options' => array ('' => '- Select -',
+          0 => 'SK',
+          1 => '1',
+          2 => '2',
+        ),
+      );
+    }
     $form['teacher_title'] = array(
       '#type' => 'select',
       '#title' => t('Teacher Title'),
@@ -596,19 +616,19 @@ function SistemaMail($mailtype, $studentname) {
   $from = \Drupal::config('system.site')->get('mail');
   
   if ($mailtype == 'NewStudent') {
-  
+    
     $subject = t('You successfully submitted a Sistema Toronto application for @studentname', array('@studentname' => $studentname));
-  
+    
     $body = '<p>' . t('Thank you for submitting a Sistema Toronto 2017/18 registration for @studentname.', array('@studentname' => $studentname)) . '</p>'
-       . '<p>' .t('Though we would love to accept all new applicants, space in our program is limited. The  Sistema Toronto Academy will, at its discretion, accept 12-5 students entering grades 1 to 3 in 2017-18 (currently enrolled in SK, Grade 1 or Grade 2). Students will be chosen by school recommendation and/or witnessed lottery in consultation with school principal and teachers. When all places are filled, the remaining names will be placed on a waiting list in their lottery order. The list of names will not be maintained after November 1, 2017. Parents will be notified if their child is accepted or wait listed in early June 2017.') . '</p>'
-       . '<p>' . t('Thank you,') . '</p>'
-       . '<p>' . t('Sistema Toronto.') . '</p>';
+      . '<p>' .t('Though we would love to accept all new applicants, space in our program is limited. The  Sistema Toronto Academy will, at its discretion, accept 12-5 students entering grades 1 to 3 in 2017-18 (currently enrolled in SK, Grade 1 or Grade 2). Students will be chosen by school recommendation and/or witnessed lottery in consultation with school principal and teachers. When all places are filled, the remaining names will be placed on a waiting list in their lottery order. The list of names will not be maintained after November 1, 2017. Parents will be notified if their child is accepted or wait listed in early June 2017.') . '</p>'
+      . '<p>' . t('Thank you,') . '</p>'
+      . '<p>' . t('Sistema Toronto.') . '</p>';
   }
   
   if ($mailtype == 'ReturningStudent') {
-  
+    
     $subject = t('You successfully submitted a Sistema Toronto student renewal for @studentname', array('@studentname' => $studentname));
-  
+    
     $body = '<p>' . t('Thank you for submitting a Sistema Toronto 2017/18 renewal for @studentname.', array('@studentname' => $studentname)) . '</p>'
       . '<p>' .t('We are glad you will be returning for another year with us! We will be in touch before the end of the school year to let you know the startup dates for September. If you have any questions or concerns, please email info@sistema-toronto.ca, call our office at 416-545-0200, or speak to your Centre Director.') . '</p>'
       . '<p>' . t('Thank you,') . '</p>'
