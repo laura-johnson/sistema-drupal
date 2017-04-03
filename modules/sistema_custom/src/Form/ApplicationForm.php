@@ -477,9 +477,6 @@ class ApplicationForm extends FormBase {
     if (dobHelper($form_state->getValue('dob'))) {
       $form_state->setErrorByName('dob', $this->t('Date of birth must be in the format YYYY-MM-DD'));
     }
-    if (gradeHelper($form_state->getValue('grade')) && empty($form_state->getValue('student_nid'))) {
-      $form_state->setErrorByName('grade', $this->t('Grade for new registrations must be 0 to 4.  Enter 0 for SK.'));
-    }
   }
   /**
    * {@inheritdoc}
@@ -598,13 +595,6 @@ function dobHelper($dob) {
     return TRUE;
   }
 }
-
-function gradeHelper($dob) {
-  if (strlen($dob) > 0 && !preg_match('/^[0-4]{1}$/i', $dob)) {
-    return TRUE;
-  }
-}
-
 
 function SistemaMail($mailtype, $studentname) {
   
